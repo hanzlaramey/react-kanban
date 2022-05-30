@@ -7,7 +7,7 @@ Since this project use Hooks, you have to install them:
 After, Install the lib on your project:
 
 ```bash
-yarn add @hanzlaramey/react-kanban
+npm i https://github.com/hanzlaramey/react-kanban
 ```
 
 Import the lib and use it on your project:
