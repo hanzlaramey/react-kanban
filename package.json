@@ -1,5 +1,5 @@
 {
-  "name": "@asseinfo/react-kanban",
+  "name": "@hanzlaramey/react-kanban",
   "version": "2.1.1",
   "description": "Updated React Kanban Board with Popup on CardAdd",
   "main": "dist/index.js",
@@ -7,7 +7,7 @@
     "dist/index.js",
     "dist/styles.css"
   ],
-  "repository": "https://github.com/asseinfo/react-kanban",
+  "repository": "https://github.com/hanzlaramey/react-kanban",
   "author": "Hanzla Ramey",
   "license": "MIT",
   "peerDependencies": {
