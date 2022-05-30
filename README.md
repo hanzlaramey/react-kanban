@@ -538,30 +538,3 @@ Read [Cypress code coverage guide](https://on.cypress.io/code-coverage)
 
 Note: to avoid inserting `babel-plugin-istanbul` twice during Jest tests, E2E tests run with `NODE_ENV=cypress` environment variable. The `babel-plugin-istanbul` plugin is included in [.babelrc](.babelrc) file only in the `cypress` Node environment, leaving the default Jest configuration during `NODE_ENV=test` the same.
 
-## 🚴‍♀️ Roadmap
-
-You can view the next features [here](https://github.com/lourenci/react-kanban/milestone/1).
-Feel welcome to help us with some PRs.
-
-## 🤝 Contributing
-
-PRs are welcome:
-
-- Fork this project.
-- Setup it:
-  ```
-  yarn
-  yarn start
-  ```
-- Make your change.
-- Please add yourself to the contributors table (we use [all contributors](https://allcontributors.org/docs/en/cli/installation) for that, we you will need that installed first):
-  ```
-  yarn contributors:add
-  ```
-- Open the PR.
-
-### ✍️ Guidelines for contributing
-
-- You need to test your change.
-- Try to be clean on your change. CodeClimate will keep an eye on you.
-- It has to pass on CI.
