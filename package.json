@@ -1,14 +1,14 @@
 {
   "name": "@asseinfo/react-kanban",
-  "version": "2.1.0",
-  "description": "Yet another Kanban/Trello board lib for React.",
+  "version": "2.1.1",
+  "description": "Updated React Kanban Board with Popup on CardAdd",
   "main": "dist/index.js",
   "files": [
     "dist/index.js",
     "dist/styles.css"
   ],
   "repository": "https://github.com/asseinfo/react-kanban",
-  "author": "Leandro Lourenci",
+  "author": "Hanzla Ramey",
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",
@@ -77,6 +77,7 @@
     "dev": "cross-env NODE_ENV=cypress start-test server 8080 'cypress open'"
   },
   "dependencies": {
-    "react-beautiful-dnd": "^13.0.0"
+    "react-beautiful-dnd": "^13.0.0",
+    "reactstrap": "^9.0.3"
   }
 }

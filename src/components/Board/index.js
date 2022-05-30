@@ -44,6 +44,7 @@ function UncontrolledBoard({
   disableColumnDrag,
   allowAddCard,
   onNewCardConfirm,
+  serviceType,
 }) {
   const [board, setBoard] = useState(initialBoard)
   const handleOnCardDragEnd = partialRight(handleOnDragEnd, { moveCallback: moveCard, notifyCallback: onCardDragEnd })
@@ -257,6 +258,7 @@ function BoardContainer({
               disableCardDrag={disableCardDrag}
               onCardNew={onCardNew}
               allowAddCard={allowAddCard}
+			  serviceType={serviceType}
             >
               {column}
             </Column>
