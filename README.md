@@ -506,35 +506,4 @@ You can either style all the board or import our style and override it with the 
 | `react-kanban-column-header__button` |
 | `react-kanban-column-adder-button` |
 
-## 🧪 Tests
-
-### Unit
-
-```shell
-yarn test
-```
-
-Code coverage is saved in `coverage` folder. Open HTML report for example with
-
-```shell
-open coverage/lcov-report/index.html
-```
-
-### End-to-end
-
-Using [Cypress](https://www.cypress.io) test runner. Start dev server and open Cypress using
-
-```shell
-yarn dev
-```
-
-All tests are in the [cypress/integration](cypress/integration) folder. These tests also collect code coverage and save in several formats in the `coverage` folder. Open HTML report
-
-```shell
-open coverage/lcov-report/index.html
-```
-
-Read [Cypress code coverage guide](https://on.cypress.io/code-coverage)
-
-Note: to avoid inserting `babel-plugin-istanbul` twice during Jest tests, E2E tests run with `NODE_ENV=cypress` environment variable. The `babel-plugin-istanbul` plugin is included in [.babelrc](.babelrc) file only in the `cypress` Node environment, leaving the default Jest configuration during `NODE_ENV=test` the same.
 
