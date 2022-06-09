@@ -142,6 +142,7 @@ function UncontrolledBoard({
       disableCardDrag={disableCardDrag}
       onCardNew={(column, card) => handleDraftCardAdd(column, card, allowAddCard)}
       allowAddCard={allowAddCard && onNewCardConfirm}
+      serviceType={serviceType}
     >
       {board}
     </BoardContainer>
@@ -165,6 +166,7 @@ function ControlledBoard({
   onCardRemove,
   disableCardDrag,
   disableColumnDrag,
+  serviceType,
 }) {
   const handleOnCardDragEnd = partialRight(handleOnDragEnd, { notifyCallback: onCardDragEnd })
   const handleOnColumnDragEnd = partialRight(handleOnDragEnd, { notifyCallback: onColumnDragEnd })
@@ -198,6 +200,7 @@ function ControlledBoard({
       onColumnRename={onColumnRename}
       disableColumnDrag={disableColumnDrag}
       disableCardDrag={disableCardDrag}
+      serviceType={serviceType}
     >
       {board}
     </BoardContainer>
@@ -219,6 +222,7 @@ function BoardContainer({
   onCardDragEnd,
   onCardNew,
   allowAddCard,
+  serviceType,
 }) {
   function handleOnDragEnd(event) {
     const coordinates = getCoordinates(event, board)
@@ -258,7 +262,7 @@ function BoardContainer({
               disableCardDrag={disableCardDrag}
               onCardNew={onCardNew}
               allowAddCard={allowAddCard}
-			  serviceType={serviceType}
+              serviceType={serviceType}
             >
               {column}
             </Column>
