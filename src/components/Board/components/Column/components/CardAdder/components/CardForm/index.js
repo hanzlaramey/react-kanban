@@ -5,7 +5,7 @@ import { when } from '@services/utils'
 function CardForm({ onConfirm, onCancel, serviceType }) {
   const inputCardTitle = useRef()
   const inputCardDescription = useRef()
-  const openModal = true;
+  const openModal = true
 
   function addCard(event) {
     event.preventDefault()
@@ -48,13 +48,7 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
           <Modal isOpen={openModal} toggle={onCancel} centered>
             <div className='modal-header'>
               <h5 className='modal-title mt-0'>Center Modal</h5>
-              <button
-                type='button'
-                onClick={() => this.setState({ modal_center: false })}
-                className='close'
-                data-dismiss='modal'
-                aria-label='Close'
-              >
+              <button type='button' onClick={onCancel} className='close' data-dismiss='modal' aria-label='Close'>
                 <span aria-hidden='true'>&times;</span>
               </button>
             </div>
