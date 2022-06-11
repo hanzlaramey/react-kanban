@@ -8,6 +8,7 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
   const openModal = true
 
   function addCard(event) {
+    console.log('Clicked')
     event.preventDefault()
     when(inputCardTitle.current.value)((value) => {
       onConfirm({ title: value, description: inputCardDescription.current.value })
@@ -71,10 +72,10 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
                     required
                   />
                 </FormGroup>
-                <div style={{ textAlign: 'center' }}>
+                <div style={{ textAlign: 'end' }}>
                   <Button
                     className='react-kanban-card-adder-form__button'
-                    type='submit'
+                    type='button'
                     onClick={addCard}
                     style={{ backgroundColor: 'rgb(106, 79, 235)' }}
                   >
@@ -88,7 +89,7 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
                       textAlign: 'center',
                       marginLeft: '10px',
                       backgroundColor: 'white',
-                      color: 'color: rgba(25, 4, 69, 0.7);',
+                      color: 'rgba(25, 4, 69, 0.7);',
                     }}
                   >
                     Cancel
