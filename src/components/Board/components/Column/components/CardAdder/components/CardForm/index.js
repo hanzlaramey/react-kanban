@@ -71,11 +71,26 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
                     required
                   />
                 </FormGroup>
-                <div>
-                  <Button className='react-kanban-card-adder-form__button' type='submit' onClick={addCard}>
+                <div style={{ textAlign: 'center' }}>
+                  <Button
+                    className='react-kanban-card-adder-form__button'
+                    type='submit'
+                    onClick={addCard}
+                    style={{ backgroundColor: 'rgb(106, 79, 235)' }}
+                  >
                     Submit
                   </Button>
-                  <Button className='react-kanban-card-adder-form__button' type='button' onClick={onCancel}>
+                  <Button
+                    className='react-kanban-card-adder-form__button'
+                    type='button'
+                    onClick={onCancel}
+                    style={{
+                      textAlign: 'center',
+                      marginLeft: '10px',
+                      backgroundColor: 'white',
+                      color: 'color: rgba(25, 4, 69, 0.7);',
+                    }}
+                  >
                     Cancel
                   </Button>
                 </div>
