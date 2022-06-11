@@ -47,13 +47,15 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
 
           <Modal isOpen={openModal} toggle={onCancel} centered>
             <div className='modal-header'>
-              <h5 className='modal-title mt-0 text-center'>Add Job</h5>
+              <h5 className='modal-title mt-0' style={{ textAlign: 'center !important' }}>
+                Add Job
+              </h5>
               {/* <button type='button' onClick={onCancel} className='close' data-dismiss='modal' aria-label='Close'>
                 <span aria-hidden='true'>&times;</span>
               </button> */}
             </div>
             <div className='modal-body'>
-              <Form>
+              <Form onSubmit={addCard}>
                 <FormGroup>
                   <Label for='exampleEmail'>Job Title</Label>
                   <Input
@@ -72,7 +74,9 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
                     ref={inputCardDescription}
                   />
                 </FormGroup>
-                <Button>Submit</Button>
+                <Button className='react-kanban-card-adder-form__button' type='submit'>
+                  Submit
+                </Button>
               </Form>
             </div>
           </Modal>
