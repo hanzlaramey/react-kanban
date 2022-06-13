@@ -1,18 +1,18 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { Modal, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
 import { when } from '@services/utils'
 
 function CardForm({ onConfirm, onCancel, serviceType }) {
   const inputCardTitle = useRef()
   const inputCardDescription = useRef()
+  const [title, setTitle] = useState(null)
+  const [company, setCompany] = useState(null)
   const openModal = true
 
   function addCard(event) {
     console.log('Clicked')
     event.preventDefault()
-    when(inputCardTitle.current.value)((value) => {
-      onConfirm({ title: value, description: inputCardDescription.current.value })
-    })
+    onConfirm({ title: title, description: company })
   }
 
   return (
@@ -58,7 +58,7 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
                     className='react-kanban-card-adder-form__title'
                     type='text'
                     name='title'
-                    ref={inputCardTitle}
+                    onChange={(event) => setTitle(event.target.value)}
                     required
                   />
                 </FormGroup>
@@ -68,7 +68,7 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
                     className='react-kanban-card-adder-form__description'
                     type='text'
                     name='description'
-                    ref={inputCardDescription}
+                    onChange={(event) => setCompany(event.target.value)}
                     required
                   />
                 </FormGroup>
@@ -88,7 +88,7 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
                       textAlign: 'center',
                       marginLeft: '10px',
                       backgroundColor: 'white',
-                      color: 'rgba(25, 4, 69, 0.7);',
+                      color: '#707070',
                     }}
                   >
                     Cancel
