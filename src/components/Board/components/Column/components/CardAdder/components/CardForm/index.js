@@ -50,14 +50,14 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
                     Submit
                   </Button>
                   <Button
-                    className='react-kanban-card-adder-form__button'
+                    className='react-kanban-card-adder-form__button btn-danger'
                     type='button'
                     onClick={onCancel}
                     style={{
                       textAlign: 'center',
                       marginLeft: '10px',
                       backgroundColor: 'white',
-                      color: '#707070',
+                      color: 'red',
                     }}
                   >
                     Cancel
@@ -94,14 +94,14 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
                     Submit
                   </Button>
                   <Button
-                    className='react-kanban-card-adder-form__button'
+                    className='react-kanban-card-adder-form__button  btn-danger'
                     type='button'
                     onClick={onCancel}
                     style={{
                       textAlign: 'center',
                       marginLeft: '10px',
                       backgroundColor: 'white',
-                      color: '#707070',
+                      color: 'red',
                     }}
                   >
                     Cancel
