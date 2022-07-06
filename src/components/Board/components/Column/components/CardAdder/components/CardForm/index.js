@@ -69,7 +69,7 @@ function CardForm({ onConfirm, onCancel, serviceType }) {
         <>
           <Modal isOpen={openModal} toggle={onCancel} centered>
             <div className='modal-header' style={{ justifyContent: 'center !important' }}>
-              <h5 className='modal-title mt-0'>Add Job</h5>
+              <h5 className='modal-title mt-0'>Add Task</h5>
             </div>
             <div className='modal-body react-kanban-card-adder-form'>
               <form onSubmit={addCard}>
